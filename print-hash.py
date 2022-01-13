@@ -1,8 +1,9 @@
 import hashlib
 import pathlib
 import sys
+import os
 
-packages_dir = pathlib.Path(sys.argv[1]).resolve().absolute()
+packages_dir = pathlib.Path(os.getenv("INPUT_PACKAGES_DIR")).resolve().absolute()
 
 print("Showing hash values of files to be uploaded:")
 
